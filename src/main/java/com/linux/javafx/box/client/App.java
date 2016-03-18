@@ -20,7 +20,7 @@ package com.linux.javafx.box.client;
  * #L%
  */
 
-import com.airhacks.followme.dashboard.DashboardView;
+import com.linux.javafx.box.client.dashboard.DashboardView;
 import com.airhacks.afterburner.injection.Injector;
 import java.time.LocalDate;
 import java.time.Month;

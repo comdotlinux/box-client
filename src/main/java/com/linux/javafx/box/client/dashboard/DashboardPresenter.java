@@ -16,6 +16,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
 import javax.inject.Inject;
+import org.apache.commons.lang.StringUtils;
 
 /**
  *
@@ -24,7 +25,7 @@ import javax.inject.Inject;
 public class DashboardPresenter implements Initializable {
 
     @Inject
-    private boolean rememberme;
+    private String rememberme;
 
     @Inject
     private String username;
@@ -68,7 +69,7 @@ public class DashboardPresenter implements Initializable {
         usernameLabel.setText(rb.getString("username"));
         passwordLabel.setText(rb.getString("password"));
 
-        rememberMe.setSelected(rememberme);
+        rememberMe.setSelected(StringUtils.equalsIgnoreCase(rememberme, "yes"));
         usernameInput.setText(username);
         passwordInput.setText(password);
 
