@@ -50,10 +50,9 @@ public class App extends Application {
          */
         Injector.setConfigurationSource(customProperties::get);
 
-        System.setProperty("happyEnding", " Enjoy the flight!");
         DashboardView appView = new DashboardView();
         Scene scene = new Scene(appView.getView());
-        stage.setTitle("followme.fx");
+        stage.setTitle("Box JavaFX Client");
         final String uri = getClass().getResource("app.css").toExternalForm();
         scene.getStylesheets().add(uri);
         stage.setScene(scene);

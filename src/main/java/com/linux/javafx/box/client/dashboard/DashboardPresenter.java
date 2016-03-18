@@ -14,8 +14,9 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.control.TitledPane;
+import javafx.scene.layout.AnchorPane;
 import javax.inject.Inject;
+import javafx.scene.layout.Pane;
 import org.apache.commons.lang.StringUtils;
 
 /**
@@ -34,7 +35,7 @@ public class DashboardPresenter implements Initializable {
     private String password;
 
     @FXML
-    private TitledPane titlePane;
+    private AnchorPane pane;
 
     @FXML
     private Label dashboardHeader;
@@ -62,7 +63,6 @@ public class DashboardPresenter implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        titlePane.setText(rb.getString("title"));
         dashboardHeader.setText(rb.getString("header"));
         rememberMe.setText(rb.getString("rememberme"));
         login.setText(rb.getString("login"));
