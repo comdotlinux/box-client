@@ -133,7 +133,7 @@ limitations under the License.
                             <goal>exec</goal>
                         </goals>
                         <configuration>
-                            <executable>${env.JAVA_HOME}/bin/javafxpackager</executable>
+                            <executable>${env.JAVA_HOME}/bin/javapackager</executable>
                             <arguments>
                                 <argument>-createjar</argument>
                                 <argument>-nocss2bin</argument>

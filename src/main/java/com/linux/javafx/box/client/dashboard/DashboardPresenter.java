@@ -5,6 +5,7 @@
  */
 package com.linux.javafx.box.client.dashboard;
 
+import com.linux.javafx.box.client.base.BaseView;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -35,7 +36,7 @@ public class DashboardPresenter implements Initializable {
     private String password;
 
     @FXML
-    private AnchorPane pane;
+    private AnchorPane basePane;
 
     @FXML
     private Label dashboardHeader;
@@ -81,6 +82,9 @@ public class DashboardPresenter implements Initializable {
     
     public void loginButtonClicked(){
         output.setText("Username : " + usernameInput.getText() + " | Password : " + passwordInput.getText());
+        BaseView baseView = new BaseView();
+        basePane.setVisible(false);
+        baseView.getView().setVisible(true);
     }
 
 }
