@@ -10,6 +10,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
@@ -83,8 +84,9 @@ public class DashboardPresenter implements Initializable {
     public void loginButtonClicked(){
         output.setText("Username : " + usernameInput.getText() + " | Password : " + passwordInput.getText());
         BaseView baseView = new BaseView();
-        basePane.setVisible(false);
-        baseView.getView().setVisible(true);
+        final Parent view = baseView.getView();
+        basePane.getChildren().clear();
+        basePane.getChildren().add(view);
     }
 
 }
