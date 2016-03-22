@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
@@ -20,6 +21,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javax.inject.Inject;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -84,7 +86,10 @@ public class DashboardPresenter implements Initializable {
     
     public void loginButtonClicked(){
         output.setText("Username : " + usernameInput.getText() + " | Password : " + passwordInput.getText());
-        basePane.getScene().setRoot(new BaseView().getView());
+        basePane.getScene().getWindow().hide();
+        Stage baseStage = new Stage();
+        baseStage.setScene(new Scene(new BaseView().getView()));
+        baseStage.show();
     }
 
 }

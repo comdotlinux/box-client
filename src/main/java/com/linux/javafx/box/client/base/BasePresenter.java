@@ -22,7 +22,8 @@ public class BasePresenter implements Initializable{
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         log.debug("URL : {}", url);
-        log.debug("Resource Bundle : {}", rb);
+        log.debug("Resource Bundle values :");
+        rb.keySet().forEach((k) -> {log.debug("Key {} -> Value {}", k , rb.getObject(k));});
     }
     
 }
