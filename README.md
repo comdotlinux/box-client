@@ -3,6 +3,8 @@ box-client
 
 A simple desktop client for box using java and javafx such that it can be used anywhere where java / javafx is available
 
+Very in progress, Just have the login and no integration wit box-java-client at all..
+
 igniter.fx
 ===========
 
