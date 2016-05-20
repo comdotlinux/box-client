@@ -14,3 +14,4 @@ igniter.fx
 2. Start the application with java -jar ./target/[project.artifactId]-app.jar
 
 See also: [http://afterburner.adam-bien.com](http://afterburner.adam-bien.com)
+Test
